@@ -1,0 +1,19 @@
+package com.itfactory;
+
+import java.util.Scanner;
+
+public class Main {
+    /**
+     * 2. Scrieti un program in care afisati toate numerele intregi de
+     * la -100 la 100, mai putin cele divizibile cu 3
+     */
+    public static void main(String[] args)
+    {
+        int x = -100;
+        for(  ; x<=100; x++){
+            if (x % 3 != 0){
+                System.out.println(x);
+            }
+        }
+    }
+}
