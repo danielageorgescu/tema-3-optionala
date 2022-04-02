@@ -1,0 +1,127 @@
+package com.itfactory;
+
+import java.util.Scanner;
+
+public class Main {
+    /**
+     * 3. Scrieti un program in care creati o
+     * consola interactiva prin care userul poate sa aleaga optiuni de la 1 la 3. La start-ul programului,
+     * va trebui sa apara un mesaj cu optiunile posibile.
+     * a) Pentru optiunea 1, userul va trebui sa introduca un numar de la 1 la 10.
+     * Daca numarul nu este in acest interval se va afisa un mesaj de eroare.
+     * b) Pentru optiunea 2 userul va trebui sa introduca doua numere intregi si se va afisa
+     * suma acestora
+     * c) Pentru optiunea 3 userul va trebui sa introduca un numar intreg pozitiv (se va
+     * face verificarea) iar pe baza acestuia se vor afisa toate numerele de la 0 pana la acesta
+     */
+    public static void main(String[] args) {
+        Scanner scanner4 = new Scanner(System.in);
+        System.out.println("Bun venit. Azi ne vom distra cu numere.");
+        System.out.println("Am pregatit 3 optiuni pentru voi");
+        System.out.println("1. Rapiditate la tastarea corecta a numerelor :)");
+        System.out.println("2. Adunam ");
+        System.out.println("3. Enumeram ");
+        System.out.println("Alegeti o optiune!");
+        int x = Integer.parseInt(scanner4.nextLine());
+
+
+        if (x <= 3) {
+            switch (x) {
+                case 1:
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.println("Introduceti un numar cuprins intre 1 si 10");
+                    int Optiunea1 = Integer.parseInt(scanner.nextLine());
+                    System.out.println("Te astept sa mai incearci si alte optiuni");
+
+                    while (Optiunea1 >= 10) {
+                        System.out.println("Numar necorespunzator. Introduceti un nou numar");
+                        Optiunea1 = Integer.parseInt(scanner.nextLine());
+                        System.out.println("Te astept sa mai incearci si alte optiuni");
+                    }
+                    break;
+                case 2:
+                    Scanner scanner1 = new Scanner(System.in);
+                    System.out.println("Introduceti un numar de la tastatura");
+                    int Optiunea2a = Integer.parseInt(scanner1.nextLine());
+                    System.out.println("Introduceti al doilea numar");
+                    int Optiunea2b = Integer.parseInt(scanner1.nextLine());
+
+                    int Rezultatsuma = Optiunea2a + Optiunea2b;
+                    System.out.println("Suma numerelor introduse este: " + Rezultatsuma);
+                    System.out.println("Te astept sa mai incearci si alte optiuni");
+                    break;
+                case 3:
+                    Scanner scanner2 = new Scanner(System.in);
+                    System.out.println("Introduceti un numar intreg pozitiv");
+                    int Optiunea3 = Integer.parseInt(scanner2.nextLine());
+                    int a;
+
+                    for (a = 0; a <= Optiunea3; a++) {
+                        System.out.println(a);
+
+                        if (a == Optiunea3) {
+                            System.out.println("S-a terminat enumerarea");
+                            System.out.println("Te astept sa mai incearci si alte optiuni");
+                            break;
+                        }
+                    }
+                    break;
+            }
+        } else {
+            System.out.println("Nu ne distram asa :)");
+            Scanner scanner3 = new Scanner(System.in);
+            System.out.println("Introduceti din nou un numar cuprins intre 1 si 3");
+            int Eroare = Integer.parseInt(scanner3.nextLine());
+
+            while ( Eroare > 3){
+                System.out.println("Numar necorespunzator. Introduceti un nou numar");
+                Eroare = Integer.parseInt(scanner3.nextLine());
+            }
+            if(Eroare <= 3) {
+                switch (Eroare) {
+                    case 1:
+                        Scanner scanner = new Scanner(System.in);
+                        System.out.println("Introduceti un numar cuprins intre 1 si 10");
+                        int Optiunea1 = Integer.parseInt(scanner.nextLine());
+                        System.out.println("Te astept sa mai incearci si alte optiuni");
+
+                        while (Optiunea1 >= 10) {
+                            System.out.println("Numar necorespunzator. Introduceti un nou numar");
+                            Optiunea1 = Integer.parseInt(scanner.nextLine());
+                            System.out.println("Te astept sa mai incearci si alte optiuni");
+                        }
+                        break;
+                    case 2:
+                        Scanner scanner1 = new Scanner(System.in);
+                        System.out.println("Introduceti un numar de la tastatura");
+                        int Optiunea2a = Integer.parseInt(scanner1.nextLine());
+                        System.out.println("Introduceti al doilea numar");
+                        int Optiunea2b = Integer.parseInt(scanner1.nextLine());
+
+                        int Rezultatsuma = Optiunea2a + Optiunea2b;
+                        System.out.println("Suma numerelor introduse este: " + Rezultatsuma);
+                        System.out.println("Te astept sa mai incearci si alte optiuni");
+                        break;
+                    case 3:
+                        Scanner scanner2 = new Scanner(System.in);
+                        System.out.println("Introduceti un numar intreg pozitiv");
+                        int Optiunea3 = Integer.parseInt(scanner2.nextLine());
+                        int a;
+
+                        for (a = 0; a <= Optiunea3; a++) {
+                            System.out.println(a);
+
+                            if (a == Optiunea3) {
+                                System.out.println("S-a terminat enumerarea");
+                                System.out.println("Te astept sa mai incearci si alte optiuni");
+                                break;
+                            }
+                        }
+                        break;
+                }
+               }
+
+
+        }
+    }
+}
